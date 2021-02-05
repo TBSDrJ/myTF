@@ -55,11 +55,11 @@ class Net():
         self.model.add(layers.Conv2D(6, 5, input_shape = input_shape, activation = 'relu'))
         # In our example, output from first Conv2D is 28 x 28 x 6.
         # For MaxPooling2D, default strides is equal to pool_size.  Batch and layers are assumed to match whatever comes in.
-        self.model.add(layers.MaxPooling2D(pool_size = 2))
+        self.model.add(layers.MaxPool2D(pool_size = 2))
         # In our example, we are now at 14 x 14 x 6.
         self.model.add(layers.Conv2D(16, 5, activation = 'relu'))
         # In our example, we are now at 10 x 10 x 16.
-        self.model.add(layers.MaxPooling2D(pool_size = 2))
+        self.model.add(layers.MaxPool2D(pool_size = 2))
         # In our example, we are now at 5 x 5 x 16.
         self.model.add(layers.Flatten())
         # Now, we flatten to one dimension, so we go to just length 400.
